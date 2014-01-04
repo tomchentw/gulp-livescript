@@ -1,0 +1,39 @@
+{
+  "name": "gulp-LiveScript",
+  "version": "0.0.0",
+  "description": "LiveScript plugin for gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tomchentw/gulp-LiveScript.git"
+  },
+  "keywords": [
+    "LiveScript",
+    "gulp"
+  ],
+  "author": {
+    "name": "tomchentw",
+    "email": "developer@tomchentw.com",
+    "url": "https://github.com/tomchentw/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://tomchentw.mit-license.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/tomchentw/gulp-LiveScript/issues"
+  },
+  "homepage": "https://github.com/tomchentw/gulp-LiveScript",
+  "dependencies": {
+    "gulp-util": "*",
+    "LiveScript": "~1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.2.2",
+    "mocha": "~1.16.2",
+    "should": "~2.1.1"
+  }
+}
