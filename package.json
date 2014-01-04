@@ -1,6 +1,6 @@
 {
   "name": "gulp-livescript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "LiveScript plugin for gulp",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,8 @@
   },
   "keywords": [
     "LiveScript",
-    "gulp"
+    "gulp",
+    "gulpplugin"
   ],
   "author": {
     "name": "tomchentw",
@@ -38,6 +39,7 @@
     "gulp": "~3.2.2",
     "gulp-mocha": "~0.2.0",
     "gulp-clean": "~0.1.3",
+    "gulp-bump": "0.0.7",
     "mocha": "~1.16.2",
     "should": "~2.1.1"
   }
