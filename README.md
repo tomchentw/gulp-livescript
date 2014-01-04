@@ -1,6 +1,6 @@
 # gulp-livescript
 
-[![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript)
+[![NPM version](https://badge.fury.io/js/gulp-livescript.png)](http://badge.fury.io/js/gulp-livescript) [![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript)
 
 LiveScript plugin for gulp
 
