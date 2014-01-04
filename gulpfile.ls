@@ -2,6 +2,7 @@ require! {
   gulp
   'gulp-livescript': './src'
   'gulp-bump'
+  'gulp-release'
   'gulp-mocha'
   'gulp-clean'
 }
@@ -24,7 +25,11 @@ gulp.task 'default' <[clean]> !->
     .pipe gulp-livescript!
     .pipe gulp.dest '.'
 
-gulp.task 'bump' !->
-  gulp.src 'package.json'
-    .pipe gulp-bump gulp.env{bump or 'patch'}
+
+gulp.task 'release' <[default]> ->
+  return gulp.src 'package.json'
+    .pipe gulp-bump bump: 'patch'
     .pipe gulp.dest '.'
+    .pipe gulp-release do
+      commit: do
+        message: 'chore(release): <%= package.version %>'
