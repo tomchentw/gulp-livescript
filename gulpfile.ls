@@ -1,13 +1,13 @@
 require! {
   gulp
-  'gulp-LiveScript': './src'
+  'gulp-livescript': './src'
   'gulp-mocha'
   'gulp-clean'
 }
 
 gulp.task 'compile' ->
   return gulp.src 'src/*.ls'
-    .pipe gulp-LiveScript!
+    .pipe gulp-livescript!
     .pipe gulp.dest 'tmp/'
 
 gulp.task 'clean' ->
@@ -20,5 +20,5 @@ gulp.task 'test' <[compile]> !->
 
 gulp.task 'default' <[clean]> !->
   gulp.src 'src/index.ls'
-    .pipe gulp-LiveScript!
+    .pipe gulp-livescript!
     .pipe gulp.dest '.'

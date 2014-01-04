@@ -1,20 +1,20 @@
 require! {
   fs
   path.join
-  'gulp-LiveScript': './index'
+  'gulp-livescript': './index'
   gutil: 'gulp-util'
   mocha
   should
 }
 
-(...) <-! describe 'gulp-LiveScript'
+(...) <-! describe 'gulp-livescript'
 
 it 'should compile ls into js' !(done) ->
   expectEquals = !(left, right) -->
     String(left.contents) .should.equal String(right.contents)
     done!
 
-  const stream = gulp-LiveScript header: true
+  const stream = gulp-livescript header: true
   stream.on 'error' done
   stream.on 'data' !(compiled) ->
     should.exist compiled

@@ -5,7 +5,7 @@
   LiveScript = require('LiveScript');
   gutil = require('gulp-util');
   toPluginError = function(reason){
-    return new gutil.PluginError('gulp-LiveScript', reason);
+    return new gutil.PluginError('gulp-livescript', reason);
   };
   module.exports = function(options){
     return eventStream.map(function(file, cb){

@@ -6,7 +6,7 @@ require! {
 }
 
 const toPluginError = (reason) ->
-  new gutil.PluginError 'gulp-LiveScript', reason
+  new gutil.PluginError 'gulp-livescript', reason
 
 module.exports = (options) -> event-stream.map !(file, cb) ->
   const done = !-> cb void, file

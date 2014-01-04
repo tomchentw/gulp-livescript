@@ -1,6 +1,6 @@
-# gulp-LiveScript
+# gulp-livescript
 
-[![Build Status](https://secure.travis-ci.org/tomchentw/gulp-LiveScript.png)](http://travis-ci.org/tomchentw/gulp-LiveScript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-LiveScript.png)](https://codeclimate.com/github/tomchentw/gulp-LiveScript)
+[![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript)
 
 LiveScript plugin for gulp
 
@@ -8,7 +8,7 @@ LiveScript plugin for gulp
 ## Usage
 
 ```javascript
-var gulpLiveScript = require('gulp-LiveScript');
+var gulpLiveScript = require('gulp-livescript');
 
 gulp.task('ls', function() {
   gulp.src('./src/*.ls')
@@ -20,9 +20,9 @@ gulp.task('ls', function() {
 
 ### Error Handling
 
-`gulp-LiveScript` will emit an error for cases such as invalid LiveScript syntax. If uncaught, the error will crash gulp.
+`gulp-livescript` will emit an error for cases such as invalid LiveScript syntax. If uncaught, the error will crash gulp.
 
-You will need to attach a listener (i.e. .on('error')) for the error event emitted by gulp-LiveScript. Since .on(...) returns this, you can compact it as inline code (See [Usage](https://github.com/tomchentw/gulp-LiveScript/blob/master/README.md#Usage)).
+You will need to attach a listener (i.e. .on('error')) for the error event emitted by gulp-livescript. Since .on(...) returns this, you can compact it as inline code (See [Usage](https://github.com/tomchentw/gulp-livescript/blob/master/README.md#Usage)).
 
 ### Options
 
@@ -31,7 +31,7 @@ The options object supports the same options as the standard LiveScript compiler
 
 ## Contributing
 
-[![devDependency Status](https://david-dm.org/tomchentw/gulp-LiveScript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-LiveScript#info=devDependencies)
+[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies)
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
