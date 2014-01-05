@@ -38,3 +38,7 @@ The options object supports the same options as the standard LiveScript compiler
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Credits
+
+* [`gulp-coffee` by @wearefractal](https://github.com/wearefractal/gulp-coffee)
