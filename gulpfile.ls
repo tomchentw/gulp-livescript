@@ -19,7 +19,7 @@ gulp.task 'clean' ->
     .pipe gulp-clean!
 
 gulp.task 'test' <[compile]> !->
-  gulp.src 'tmp/spec.js'
+  gulp.src 'test/test.ls'
     .pipe gulp-mocha!
 
 gulp.task 'default' <[clean]> !->
