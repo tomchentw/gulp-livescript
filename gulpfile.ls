@@ -22,8 +22,7 @@ gulp.task 'build' ->
 
   return event-stream.merge index, main
 
-
-gulp.task 'release' <[default]> ->
+gulp.task 'release' <[build]> ->
   const bumpStream = do
     gulp.src 'package.json'
       .pipe gulp-bump bump: 'patch'
