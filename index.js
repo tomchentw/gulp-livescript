@@ -1,38 +1,34 @@
 (function(){
-  var Buffer, eventStream, LiveScript, gutil, toPluginError;
-  Buffer = require('buffer').Buffer;
-  eventStream = require('event-stream');
+  var mapStream, LiveScript, gutil;
+  mapStream = require('map-stream');
   LiveScript = require('LiveScript');
   gutil = require('gulp-util');
-  toPluginError = function(reason){
-    return new gutil.PluginError('gulp-livescript', reason);
-  };
   module.exports = function(options){
-    return eventStream.map(function(file, cb){
-      var done, error;
+    options || (options = {});
+    function modifyLS(file, cb){
+      var done, error, e;
       done = function(){
         cb(void 8, file);
       };
+      error = function(it){
+        cb(
+        new gutil.PluginError('gulp-livescript', it));
+      };
       if (file.isNull()) {
-        done();
-        return;
+        return done();
       }
       if (file.isStream()) {
-        cb(
-        toPluginError(
-        'Streaming not supported'));
-        return;
+        return error('Streaming not supported');
       }
       try {
         file.contents = new Buffer(LiveScript.compile(file.contents.toString('utf8'), options));
         file.path = gutil.replaceExtension(file.path, '.js');
       } catch (e$) {
-        error = e$;
-        return cb(
-        toPluginError(
-        error));
+        e = e$;
+        return error(e);
       }
       done();
-    });
+    }
+    return mapStream(modifyLS);
   };
 }).call(this);
