@@ -1,7 +1,7 @@
 {
   "name": "gulp-livescript",
   "version": "0.0.5",
-  "description": "LiveScript plugin for gulp",
+  "description": "LiveScript compiler as gulp plugin",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
