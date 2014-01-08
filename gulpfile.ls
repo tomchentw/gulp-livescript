@@ -9,23 +9,18 @@ require! {
   'event-stream'
 }
 
-gulp.task 'compile' ->
-  return gulp.src 'src/*.ls'
-    .pipe gulp-livescript!
-    .pipe gulp.dest 'tmp/'
-
-gulp.task 'clean' ->
-  return gulp.src <[tmp/]>
-    .pipe gulp-clean!
-
-gulp.task 'test' <[compile]> !->
-  gulp.src 'tmp/spec.js'
-    .pipe gulp-mocha!
-
-gulp.task 'default' <[clean]> !->
-  gulp.src 'src/index.ls'
+gulp.task 'build' ->
+  const index = do
+    gulp.src 'src/index.ls'
     .pipe gulp-livescript!
     .pipe gulp.dest '.'
+
+  const main = do
+    gulp.src 'src/main.ls'
+    .pipe gulp-livescript!
+    .pipe gulp.dest 'test/'
+
+  return event-stream.merge index, main
 
 
 gulp.task 'release' <[default]> ->

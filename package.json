@@ -4,9 +4,8 @@
   "description": "LiveScript plugin for gulp",
   "main": "index.js",
   "scripts": {
-    "build": "gulp --require LiveScript",
-    "clean": "gulp clean --require LiveScript",
-    "test": "gulp test --require LiveScript",
+    "test": "mocha",
+    "build": "gulp build --require LiveScript",
     "release": "gulp release --require LiveScript"
   },
   "repository": {
