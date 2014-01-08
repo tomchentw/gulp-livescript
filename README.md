@@ -5,6 +5,27 @@
 LiveScript plugin for gulp
 
 
+## Information
+
+<table>
+<tr> 
+<td>Package</td><td>gulp-livescript</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Compile LiveScript to JavaScript for Gulp (gulpjs.com)</td>
+</tr>
+<tr>
+<td>Node Version</td>
+<td>>= 0.8</td>
+</tr>
+<tr>
+<td>Gulp Version</td>
+<td>3.x</td>
+</tr>
+</table>
+
+
 ## Usage
 
 ```javascript
