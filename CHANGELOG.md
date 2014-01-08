@@ -1,13 +1,19 @@
 <a name="0.0.6"></a>
 ### 0.0.6 (2014-01-08)
 
+Fix test suite usage with `npm test`, and add `example` folder.
+
 
 <a name="0.0.5"></a>
 ### 0.0.5 (2014-01-06)
 
+Add gemnasium bagde to README and fix `package.json` repository link.
+
 
 <a name="0.0.4"></a>
 ### 0.0.4 (2014-01-05)
+
+Add `gulp-conventional-changelog` and `gulp-release` into `release` task.
 
 
 <a name="0.0.3"></a>
