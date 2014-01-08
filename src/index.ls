@@ -1,25 +1,22 @@
 require! {
-  buffer.Buffer
-  'event-stream'
+  'map-stream'
   LiveScript
   gutil: 'gulp-util'
 }
 
-const toPluginError = (reason) ->
-  new gutil.PluginError 'gulp-livescript', reason
+module.exports = (options || {}) -> 
+  !function modifyLS (file, cb)
+    const done = !-> cb void, file
+    const error = !-> it |> new gutil.PluginError 'gulp-livescript', _ |> cb
 
-module.exports = (options) -> event-stream.map !(file, cb) ->
-  const done = !-> cb void, file
-  if file.isNull!
+    return done! if file.isNull!
+    return error 'Streaming not supported' if file.isStream!
+
+    try
+      file.contents = file.contents.toString 'utf8' |> LiveScript.compile _, options |> new Buffer _
+      file.path = gutil.replaceExtension file.path, '.js'
+    catch e
+      return error e
     done!
-    return
-  if file.isStream!
-    'Streaming not supported' |> toPluginError |> cb
-    return
 
-  try
-    file.contents = file.contents.toString 'utf8' |> LiveScript.compile _, options |> new Buffer _
-    file.path = gutil.replaceExtension file.path, '.js'
-  catch error
-    return error |> toPluginError |> cb
-  done!
+  map-stream modifyLS

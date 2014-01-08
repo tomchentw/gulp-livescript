@@ -1,12 +1,11 @@
 {
   "name": "gulp-livescript",
   "version": "0.0.5",
-  "description": "LiveScript plugin for gulp",
+  "description": "LiveScript compiler as gulp plugin",
   "main": "index.js",
   "scripts": {
-    "build": "gulp --require LiveScript",
-    "clean": "gulp clean --require LiveScript",
-    "test": "gulp test --require LiveScript",
+    "test": "mocha",
+    "build": "gulp build --require LiveScript",
     "release": "gulp release --require LiveScript"
   },
   "repository": {
@@ -34,7 +33,7 @@
   "dependencies": {
     "gulp-util": "*",
     "LiveScript": "~1.2.0",
-    "event-stream": "~3.0.20"
+    "map-stream": "0.0.4"
   },
   "devDependencies": {
     "gulp": "~3.2.2",
