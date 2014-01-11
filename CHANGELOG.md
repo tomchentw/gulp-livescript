@@ -1,3 +1,12 @@
+<a name="0.0.7"></a>
+### 0.0.7 (2014-01-11)
+
+
+#### Bug Fixes
+
+* **index.js:** generate it with bare option ([850956015df970a85983a42c5d62e033b4aa8210](https://github.com/tomchentw/gulp-livescript/commit/850956015df970a85983a42c5d62e033b4aa8210))
+
+
 <a name="0.0.6"></a>
 ### 0.0.6 (2014-01-08)
 
