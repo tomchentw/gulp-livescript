@@ -1,3 +1,12 @@
+<a name="0.0.9"></a>
+### 0.0.9 (2014-01-11)
+
+
+#### Bug Fixes
+
+* **gulpfile:** gulp-bump has a breaking change ([5bb3e99dd5ca80c5cc86f0f0a5e6bbc6fecc5897](https://github.com/tomchentw/gulp-livescript/commit/5bb3e99dd5ca80c5cc86f0f0a5e6bbc6fecc5897))
+
+
 <a name="0.0.8"></a>
 ### 0.0.8 (2014-01-11)
 
