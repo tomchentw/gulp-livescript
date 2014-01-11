@@ -1,8 +1,6 @@
 require! {
   gulp
   'gulp-livescript': './src'
-  'gulp-mocha'
-  'gulp-clean'
   'gulp-bump'
   'gulp-conventional-changelog'
   'gulp-release'
