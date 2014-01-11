@@ -38,8 +38,8 @@
   "devDependencies": {
     "gulp": "~3.3.0",
     "gulp-bump": "0.1.0",
-    "gulp-conventional-changelog": "0.0.3",
-    "gulp-release": "0.0.5",
+    "gulp-conventional-changelog": "0.0.4",
+    "gulp-release": "0.0.7",
     "mocha": "~1.17.0",
     "should": "~2.1.1",
     "event-stream": "~3.1.0"

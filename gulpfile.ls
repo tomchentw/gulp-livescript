@@ -23,7 +23,7 @@ gulp.task 'build' ->
 gulp.task 'release' <[build]> ->
   const bumpStream = do
     gulp.src 'package.json'
-      .pipe gulp-bump bump: 'patch'
+      .pipe gulp-bump type: 'patch'
       .pipe gulp.dest '.'
 
   const cgLogStream = do
