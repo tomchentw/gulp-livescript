@@ -12,7 +12,7 @@ require! {
 gulp.task 'build' ->
   const index = do
     gulp.src 'src/index.ls'
-    .pipe gulp-livescript!
+    .pipe gulp-livescript bare: true
     .pipe gulp.dest '.'
 
   const main = do

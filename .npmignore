@@ -11,6 +11,11 @@ pids
 logs
 results
 
-npm-debug.log
-node_modules
 *.sublime*
+
+example
+src
+test
+
+.travis.yml
+gulpfile.ls
