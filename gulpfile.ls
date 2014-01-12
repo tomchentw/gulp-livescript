@@ -3,7 +3,7 @@ require! {
   'gulp-livescript': './src'
   'gulp-bump'
   'gulp-conventional-changelog'
-  'gulp-release'
+  'gulp-exec'
   'event-stream'
 }
 
@@ -20,30 +20,20 @@ gulp.task 'build' ->
 
   return event-stream.merge index, main
 
-gulp.task 'release' <[build]> ->
-  const bumpStream = do
-    gulp.src 'package.json'
-      .pipe gulp-bump type: 'patch'
-      .pipe gulp.dest '.'
+gulp.task 'bump' ->
+  return gulp.src 'package.json'
+    .pipe gulp-bump type: 'patch'
+    .pipe gulp.dest '.'
 
-  const cgLogStream = do
-    event-stream.merge bumpStream, gulp.src 'CHANGELOG.md'
-      .pipe gulp-conventional-changelog!
-      .pipe gulp.dest '.'
+gulp.task 'release' <[ build bump ]> ->
+  const jsonFile = require './package.json'
+  const commitMsg = "chore(release): #{ jsonFile.version }"
 
-  const releaseStream = gulp-release do
-    commit: do
-      message: 'chore(release): <%= package.version %>'
-      
-  packFile = void
-  return event-stream.merge bumpStream, cgLogStream
-    .pipe event-stream.through !(data) ->
-      if packFile
-        @pipe releaseStream
-        @emit 'data' packFile
-      else
-        # first come must be package.json
-        packFile := data 
-
-
-
+  return gulp.src <[ package.json CHANGELOG.md ]>
+    .pipe gulp-conventional-changelog!
+    .pipe gulp.dest '.'
+    .pipe gulp-exec('git add -A')
+    .pipe gulp-exec("git commit -m '#{ commitMsg }'")
+    .pipe gulp-exec("git tag -a #{ jsonFile.version } -m '#{ commitMsg }'")
+    .pipe gulp-exec('git push')
+    .pipe gulp-exec('npm publish')

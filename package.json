@@ -36,12 +36,12 @@
     "map-stream": "0.1.0"
   },
   "devDependencies": {
-    "gulp": "~3.3.0",
-    "gulp-bump": "0.1.0",
-    "gulp-conventional-changelog": "0.0.6",
-    "gulp-release": "0.0.7",
     "mocha": "~1.17.0",
     "should": "~2.1.1",
+    "gulp": "~3.3.0",
+    "gulp-bump": "0.1.0",
+    "gulp-conventional-changelog": "0.0.7",
+    "gulp-exec": "~1.0.3",
     "event-stream": "~3.1.0"
   }
 }
