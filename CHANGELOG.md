@@ -1,56 +1,8 @@
-<a name="0.0.9"></a>
-### 0.0.9 (2014-01-11)
+<a name="0.0.10"></a>
+### 0.0.10 (2014-01-12)
 
 
 #### Bug Fixes
 
-* **gulpfile:** gulp-bump has a breaking change ([5bb3e99dd5ca80c5cc86f0f0a5e6bbc6fecc5897](https://github.com/tomchentw/gulp-livescript/commit/5bb3e99dd5ca80c5cc86f0f0a5e6bbc6fecc5897))
-
-
-<a name="0.0.8"></a>
-### 0.0.8 (2014-01-11)
-
-
-<a name="0.0.7"></a>
-### 0.0.7 (2014-01-11)
-
-
-#### Bug Fixes
-
-* **index.js:** generate it with bare option ([850956015df970a85983a42c5d62e033b4aa8210](https://github.com/tomchentw/gulp-livescript/commit/850956015df970a85983a42c5d62e033b4aa8210))
-
-
-<a name="0.0.6"></a>
-### 0.0.6 (2014-01-08)
-
-Fix test suite usage with `npm test`, and add `example` folder.
-
-
-<a name="0.0.5"></a>
-### 0.0.5 (2014-01-06)
-
-Add gemnasium bagde to README and fix `package.json` repository link.
-
-
-<a name="0.0.4"></a>
-### 0.0.4 (2014-01-05)
-
-Add `gulp-conventional-changelog` and `gulp-release` into `release` task.
-
-
-<a name="0.0.3"></a>
-### 0.0.3 (2014-01-05)
-
-
-#### Bug Fixes
-
-* **naming:** rename package to gulp-livescript ([6ea5adac2bef79292076e869baf9e6bea62362e5](https://github.com/tomchentw/gulp-livescript/commit/6ea5adac2bef79292076e869baf9e6bea62362e5))
-* **package:** add mocha as dev dependencies ([bebcab6c5f64cb46c03036aca49aa90105c516e8](https://github.com/tomchentw/gulp-livescript/commit/bebcab6c5f64cb46c03036aca49aa90105c516e8))
-
-
-#### Features
-
-* **index:** add compile functionality and test ([969ec3d4aab91b2e821dbf82c4124805977c1ed8](https://github.com/tomchentw/gulp-livescript/commit/969ec3d4aab91b2e821dbf82c4124805977c1ed8))
-* **init:** scaffold glup plugin with LiveScript support ([dc917bfd74737a381bef64f8220e53f2eee46b41](https://github.com/tomchentw/gulp-livescript/commit/dc917bfd74737a381bef64f8220e53f2eee46b41))
-
+* **package.json:** update gulp-conventional-changelog version ([f6bc31312174485f76519c8d482c12b2186105e2](https://github.com/tomchentw/gulp-livescript/commit/f6bc31312174485f76519c8d482c12b2186105e2))
 
