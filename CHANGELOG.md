@@ -1,3 +1,12 @@
+<a name="0.0.12"></a>
+### 0.0.12 (2014-01-12)
+
+
+#### Bug Fixes
+
+* **package.json:** update gulp-conventional-changelog version ([8cbd2aa8f0e450bf0a70559ef1f7d62a95a4a685](https://github.com/tomchentw/gulp-livescript/commit/8cbd2aa8f0e450bf0a70559ef1f7d62a95a4a685))
+
+
 <a name="0.0.11"></a>
 ### 0.0.11 (2014-01-12)
 
