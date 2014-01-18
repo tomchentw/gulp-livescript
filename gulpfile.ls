@@ -36,4 +36,5 @@ gulp.task 'release' <[ build bump ]> ->
     .pipe gulp-exec("git commit -m '#{ commitMsg }'")
     .pipe gulp-exec("git tag -a #{ jsonFile.version } -m '#{ commitMsg }'")
     .pipe gulp-exec('git push')
+    .pipe gulp-exec('git push --tags')
     .pipe gulp-exec('npm publish')
