@@ -1,9 +1,11 @@
 # gulp-livescript
+> Distributed via
 
-[![NPM version](https://badge.fury.io/js/gulp-livescript.png)](http://badge.fury.io/js/gulp-livescript) [![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript) [![Dependency Status](https://gemnasium.com/tomchentw/gulp-livescript.png)](https://gemnasium.com/tomchentw/gulp-livescript)
+[![NPM version](https://badge.fury.io/js/gulp-livescript.png)](http://badge.fury.io/js/gulp-livescript)
 
-LiveScript plugin for gulp
+> LiveScript plugin for gulp
 
+[![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript) [![Dependency Status](https://gemnasium.com/tomchentw/gulp-livescript.png)](https://gemnasium.com/tomchentw/gulp-livescript)
 
 ## Information
 
@@ -17,11 +19,11 @@ LiveScript plugin for gulp
 </tr>
 <tr>
 <td>Node Version</td>
-<td>>= 0.8</td>
+<td>>= 0.9</td>
 </tr>
 <tr>
 <td>Gulp Version</td>
-<td>3.x</td>
+<td>>= 3.5.0</td>
 </tr>
 </table>
 
