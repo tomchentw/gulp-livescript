@@ -54,7 +54,7 @@ The options object supports the same options as the standard LiveScript compiler
 
 ## Contributing
 
-[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies)
+[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tomchentw/gulp-livescript/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
