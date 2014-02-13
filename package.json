@@ -20,11 +20,11 @@
   "author": {
     "name": "tomchentw",
     "email": "developer@tomchentw.com",
-    "url": "https://github.com/tomchentw/"
+    "url": "https://github.com/tomchentw"
   },
   "license": {
     "type": "MIT",
-    "url": "http://tomchentw.mit-license.org/"
+    "url": "http://tomchentw.mit-license.org"
   },
   "bugs": {
     "url": "https://github.com/tomchentw/gulp-livescript/issues"
