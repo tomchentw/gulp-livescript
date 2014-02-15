@@ -7,6 +7,7 @@
 
 [![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript) [![Dependency Status](https://gemnasium.com/tomchentw/gulp-livescript.png)](https://gemnasium.com/tomchentw/gulp-livescript)
 
+
 ## Information
 
 <table>
@@ -28,6 +29,13 @@
 </table>
 
 
+## Example
+
+### See how we compile [`src/index.ls`](https://github.com/tomchentw/gulp-livescript/blob/master/src/index.ls) to [`index.js`](https://github.com/tomchentw/gulp-livescript/blob/master/index.js) in [this project](https://github.com/tomchentw/gulp-livescript/blob/master/gulpfile.ls).
+
+![`gulpfile.ls`](https://f.cloud.github.com/assets/922234/2177875/ac1d8208-9644-11e3-8d4f-3bc98a7c6d3e.png)
+
+
 ## Usage
 
 ```javascript
@@ -40,6 +48,7 @@ gulp.task('ls', function() {
 });
 
 ```
+
 
 ### Error Handling
 
@@ -61,6 +70,7 @@ The options object supports the same options as the standard LiveScript compiler
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
 
 ## Credits
 
