@@ -4,21 +4,12 @@ require! {
   'gulp-bump'
   'gulp-conventional-changelog'
   'gulp-exec'
-  'event-stream'
 }
 
 gulp.task 'build' ->
-  const index = do
-    gulp.src 'src/index.ls'
+  return gulp.src 'src/index.ls'
     .pipe gulp-livescript bare: true
     .pipe gulp.dest '.'
-
-  const main = do
-    gulp.src 'src/main.ls'
-    .pipe gulp-livescript!
-    .pipe gulp.dest 'test/'
-
-  return event-stream.merge index, main
 
 gulp.task 'bump' ->
   return gulp.src 'package.json'
