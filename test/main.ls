@@ -1,7 +1,7 @@
 require! {
   fs
   gutil: 'gulp-util'
-  'gulp-livescript': '../index'
+  'gulp-livescript': '../src'
   should
   mocha
 }
