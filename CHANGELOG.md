@@ -1,3 +1,12 @@
+<a name="0.2.0"></a>
+## 0.2.0 (2014-02-17)
+
+
+#### Features
+
+* **index.ls:** cb error when compilation fails ([fe30052a302e3b4957833ae22766cad7cb05e44c](https://github.com/tomchentw/gulp-livescript/commit/fe30052a302e3b4957833ae22766cad7cb05e44c))
+
+
 <a name="0.1.2"></a>
 ### 0.1.2 (2014-02-15)
 
