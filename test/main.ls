@@ -41,3 +41,19 @@ it 'should compile livescript with bare option to javascript' !(done) ->
     done!
 
   ls.write fakeFile
+
+it 'should emit error when livescript compilation fails' !(done) ->
+  const ls = gulp-livescript bare: true
+  const fakeFile = new gutil.File do
+      base: 'test/fixtures'
+      cwd: 'test/fixtures'
+      path: 'test/fixtures/illegal.ls'
+      contents: fs.readFileSync 'test/fixtures/illegal.ls'
+
+  ls.once 'error' !(error) ->
+    should.exist error
+    should.exist error.message
+    error.message.should.equal "Error: Parse error on line 1: Unexpected 'ID'"
+    done!
+
+  ls.write fakeFile
