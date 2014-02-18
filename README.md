@@ -42,19 +42,28 @@
 var gulpLiveScript = require('gulp-livescript');
 
 gulp.task('ls', function() {
-  gulp.src('./src/*.ls')
-    .pipe(gulpLiveScript({bare: true}).on('error', gutil.log))
+  return gulp.src('./src/*.ls')
+    .pipe(gulpLiveScript({bare: true})
+    .on('error', gutil.log))
     .pipe(gulp.dest('./public/'));
 });
-
 ```
 
 
 ### Error Handling
 
-`gulp-livescript` will emit an error for cases such as invalid LiveScript syntax. If uncaught, the error will crash gulp.
+`gulp-livescript` will [emit an error](https://github.com/tomchentw/gulp-livescript/blob/master/test/main.ls#L45) for cases such as invalid LiveScript syntax.
 
-You will need to attach a listener (i.e. .on('error')) for the error event emitted by gulp-livescript. Since .on(...) returns this, you can compact it as inline code (See [Usage](https://github.com/tomchentw/gulp-livescript/blob/master/README.md#Usage)).
+If you need to exit gulp with non-0 exit code, attatch a lister and throw the error:
+
+```livescript
+gulp.task 'build' ->
+  return gulp.src 'test/fixtures/illegal.ls'
+    .pipe gulp-livescript bare: true
+    .on 'error' -> throw it
+    .pipe gulp.dest '.'
+```
+
 
 ### Options
 
