@@ -18,7 +18,8 @@ module.exports = (options || {}) ->
     return fatalError 'Streaming not supported' if file.isStream!
 
     try
-      file.contents = file.contents.toString 'utf8' |> LiveScript.compile _, options |> new Buffer _
+      file.contents = file.contents.toString 'utf8' |>
+        LiveScript.compile _, {...options, filename: file.path} |> new Buffer _
       file.path = gutil.replaceExtension file.path, '.js'
     catch e
       return cb new Error e
