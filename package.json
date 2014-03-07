@@ -4,9 +4,7 @@
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers ls:LiveScript",
-    "build": "gulp build --require LiveScript",
-    "release": "gulp release --require LiveScript"
+    "test": "mocha --compilers ls:LiveScript"
   },
   "repository": {
     "type": "git",
