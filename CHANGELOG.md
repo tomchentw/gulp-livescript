@@ -1,3 +1,18 @@
+<a name="0.2.1"></a>
+### 0.2.1 (2014-03-07)
+
+
+#### Bug Fixes
+
+* fix tests for LiveScript filename feature. ([2c1fc448084f660feffe9bdc892e29a0ce3fa240](https://github.com/tomchentw/gulp-livescript/commit/2c1fc448084f660feffe9bdc892e29a0ce3fa240))
+
+
+#### Features
+
+* make LiveScript show the filename when there's an error ([744b187e8ad706f0be5683cfab90a3ef4573019f](https://github.com/tomchentw/gulp-livescript/commit/744b187e8ad706f0be5683cfab90a3ef4573019f))
+* **Makefile:** extract logic out from gulpfile ([d0ff136ba9e1fa2f7ad450da6995a7c5c9159fe4](https://github.com/tomchentw/gulp-livescript/commit/d0ff136ba9e1fa2f7ad450da6995a7c5c9159fe4))
+
+
 <a name="0.2.0"></a>
 ## 0.2.0 (2014-02-17)
 

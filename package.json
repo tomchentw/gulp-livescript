@@ -1,6 +1,6 @@
 {
   "name": "gulp-livescript",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "index.js",
   "scripts": {
