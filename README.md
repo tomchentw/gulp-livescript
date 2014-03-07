@@ -33,7 +33,7 @@
 
 ### See how we compile [`src/index.ls`](https://github.com/tomchentw/gulp-livescript/blob/master/src/index.ls) to [`index.js`](https://github.com/tomchentw/gulp-livescript/blob/master/index.js) in [this project](https://github.com/tomchentw/gulp-livescript/blob/master/gulpfile.ls).
 
-![`gulpfile.ls`](https://f.cloud.github.com/assets/922234/2177875/ac1d8208-9644-11e3-8d4f-3bc98a7c6d3e.png)
+![`gulpfile.ls`](https://f.cloud.github.com/assets/922234/2353915/093164d2-a5ae-11e3-8016-d1191004acb2.png)
 
 
 ## Usage
@@ -72,7 +72,7 @@ The options object supports the same options as the standard LiveScript compiler
 
 ## Contributing
 
-[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tomchentw/gulp-livescript/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies)
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
