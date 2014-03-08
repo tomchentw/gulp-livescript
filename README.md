@@ -1,11 +1,13 @@
 # gulp-livescript
 > Distributed via
 
-[![NPM version](https://badge.fury.io/js/gulp-livescript.png)](http://badge.fury.io/js/gulp-livescript)
+[![Version     ](http://img.shields.io/npm/v/gulp-livescript.svg)                             ](https://www.npmjs.org/package/gulp-livescript)
 
 > Compile LiveScript to JavaScript for Gulp
 
-[![Build Status](https://secure.travis-ci.org/tomchentw/gulp-livescript.png)](http://travis-ci.org/tomchentw/gulp-livescript) [![Code Climate](https://codeclimate.com/github/tomchentw/gulp-livescript.png)](https://codeclimate.com/github/tomchentw/gulp-livescript) [![Dependency Status](https://gemnasium.com/tomchentw/gulp-livescript.png)](https://gemnasium.com/tomchentw/gulp-livescript)
+[![Travis CI   ](http://img.shields.io/travis/tomchentw/gulp-livescript/master.svg)           ](https://travis-ci.org/tomchentw/gulp-livescript)
+[![Quality     ](http://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg)      ](https://codeclimate.com/github/tomchentw/gulp-livescript)
+[![Dependencies](http://img.shields.io/gemnasium/tomchentw/gulp-livescript.svg)               ](https://gemnasium.com/tomchentw/gulp-livescript)
 
 
 ## Information
@@ -72,7 +74,7 @@ The options object supports the same options as the standard LiveScript compiler
 
 ## Contributing
 
-[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.png?branch=master)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies)
+[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.svg?theme=shields.io)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies)
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
