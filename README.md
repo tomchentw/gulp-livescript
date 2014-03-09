@@ -1,13 +1,13 @@
 # gulp-livescript
 > Distributed via
 
-[![Version     ](http://img.shields.io/npm/v/gulp-livescript.svg)                             ](https://www.npmjs.org/package/gulp-livescript)
+[![Version     ](https://img.shields.io/npm/v/gulp-livescript.svg)                             ](https://www.npmjs.org/package/gulp-livescript)
 
 > Compile LiveScript to JavaScript for Gulp
 
-[![Travis CI   ](http://img.shields.io/travis/tomchentw/gulp-livescript/master.svg)           ](https://travis-ci.org/tomchentw/gulp-livescript)
-[![Quality     ](http://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg)      ](https://codeclimate.com/github/tomchentw/gulp-livescript)
-[![Dependencies](http://img.shields.io/gemnasium/tomchentw/gulp-livescript.svg)               ](https://gemnasium.com/tomchentw/gulp-livescript)
+[![Travis CI   ](https://img.shields.io/travis/tomchentw/gulp-livescript/master.svg)           ](https://travis-ci.org/tomchentw/gulp-livescript)
+[![Quality     ](https://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg)      ](https://codeclimate.com/github/tomchentw/gulp-livescript)
+[![Dependencies](https://img.shields.io/gemnasium/tomchentw/gulp-livescript.svg)               ](https://gemnasium.com/tomchentw/gulp-livescript)
 
 
 ## Information
