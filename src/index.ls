@@ -1,20 +1,18 @@
 require! {
-  'map-stream'
+  through: 'through2'
   LiveScript
   gutil: 'gulp-util'
 }
 
 
 
-module.exports = (options || {}) -> 
-  !function modifyLS (file, cb)
-    !function done
-      cb void, file
+module.exports = (options || {}) ->
+  !function modifyLS (file, enc, cb)
 
     !function fatalError
       it |> new gutil.PluginError 'gulp-livescript', _ |> cb
 
-    return done! if file.isNull!
+    return cb! if file.isNull!
     return fatalError 'Streaming not supported' if file.isStream!
 
     try
@@ -23,6 +21,7 @@ module.exports = (options || {}) ->
       file.path = gutil.replaceExtension file.path, '.js'
     catch e
       return cb new Error e
-    done!
+    @push file
+    cb!
 
-  map-stream modifyLS
+  through.obj modifyLS
