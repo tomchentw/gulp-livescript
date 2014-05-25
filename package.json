@@ -31,7 +31,6 @@
   "dependencies": {
     "LiveScript": "^1.2.0",
     "gulp-util": "*",
-    "map-stream": "^0.1.0",
     "through2": "^0.4.2"
   },
   "devDependencies": {
