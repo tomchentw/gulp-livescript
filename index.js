@@ -1,20 +1,17 @@
-var mapStream, LiveScript, gutil;
-mapStream = require('map-stream');
+var through, LiveScript, gutil;
+through = require('through2');
 LiveScript = require('LiveScript');
 gutil = require('gulp-util');
 module.exports = function(options){
   options || (options = {});
-  function modifyLS(file, cb){
+  function modifyLS(file, enc, cb){
     var ref$, e;
-    function done(){
-      cb(void 8, file);
-    }
     function fatalError(it){
       cb(
       new gutil.PluginError('gulp-livescript', it));
     }
     if (file.isNull()) {
-      return done();
+      return cb();
     }
     if (file.isStream()) {
       return fatalError('Streaming not supported');
@@ -26,9 +23,10 @@ module.exports = function(options){
       e = e$;
       return cb(new Error(e));
     }
-    done();
+    this.push(file);
+    cb();
   }
-  return mapStream(modifyLS);
+  return through.obj(modifyLS);
 };
 function import$(obj, src){
   var own = {}.hasOwnProperty;
