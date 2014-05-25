@@ -15,7 +15,7 @@ test: default
 	npm test
 
 release: test
-	$(bin)/gulp release $(requireLS)
+	$(bin)/gulp release $(requireLS) --type=$(TYPE)
 
 	git add -A
 	git commit -m $(newCommitMsg)
