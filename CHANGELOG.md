@@ -1,3 +1,12 @@
+<a name="0.3.0"></a>
+## 0.3.0 (2014-05-25)
+
+
+#### Features
+
+* **index.js:** replace map-stream with through2 ([62ad1579](https://github.com/tomchentw/gulp-livescript/commit/62ad1579f393c3f4a0e4b0cdb15be2270e8e6fd6))
+
+
 <a name="0.2.1"></a>
 ### 0.2.1 (2014-03-07)
 
