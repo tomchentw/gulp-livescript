@@ -1,6 +1,5 @@
 require! {
   gulp
-  'gulp-util'
   'gulp-livescript': './src'
   'gulp-bump'
   'gulp-conventional-changelog'
@@ -26,5 +25,5 @@ gulp.task 'build' ->
 
 gulp.task 'bump' ->
   return gulp.src 'package.json'
-  .pipe gulp-bump gulp-util.env{type or 'patch'}
+  .pipe gulp-bump type: process.env.TYPE || 'patch'
   .pipe gulp.dest '.'

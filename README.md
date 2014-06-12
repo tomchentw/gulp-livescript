@@ -1,13 +1,7 @@
-# gulp-livescript
-> Distributed via
-
-[![Version     ](https://img.shields.io/npm/v/gulp-livescript.svg)                             ](https://www.npmjs.org/package/gulp-livescript)
-
+# gulp-livescript [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][coveralls-image]][coveralls-url] [![Dependencies][gemnasium-image]][gemnasium-url]
 > Compile LiveScript to JavaScript for Gulp
 
-[![Travis CI   ](https://img.shields.io/travis/tomchentw/gulp-livescript/master.svg)           ](https://travis-ci.org/tomchentw/gulp-livescript)
-[![Quality     ](https://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg)      ](https://codeclimate.com/github/tomchentw/gulp-livescript)
-[![Dependencies](https://img.shields.io/gemnasium/tomchentw/gulp-livescript.svg)               ](https://gemnasium.com/tomchentw/gulp-livescript)
+[![Version][npm-image]][npm-url]
 
 
 ## Information
@@ -74,7 +68,7 @@ The options object supports the same options as the standard LiveScript compiler
 
 ## Contributing
 
-[![devDependency Status](https://david-dm.org/tomchentw/gulp-livescript/dev-status.svg?theme=shields.io)](https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies)
+[![devDependency Status][david-dm-image]][david-dm-url]
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -86,3 +80,18 @@ The options object supports the same options as the standard LiveScript compiler
 ## Credits
 
 * [`gulp-coffee` by @wearefractal](https://github.com/wearefractal/gulp-coffee)
+
+
+[npm-image]: https://img.shields.io/npm/v/gulp-livescript.svg
+[npm-url]: https://www.npmjs.org/package/gulp-livescript
+
+[travis-image]: https://travis-ci.org/tomchentw/gulp-livescript.svg?branch=master
+[travis-url]: https://travis-ci.org/tomchentw/gulp-livescript
+[codeclimate-image]: https://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg
+[codeclimate-url]: https://codeclimate.com/github/tomchentw/gulp-livescript
+[coveralls-image]: https://img.shields.io/coveralls/tomchentw/gulp-livescript.svg
+[coveralls-url]: https://coveralls.io/r/tomchentw/gulp-livescript
+[gemnasium-image]: https://gemnasium.com/tomchentw/gulp-livescript.svg
+[gemnasium-url]: https://gemnasium.com/tomchentw/gulp-livescript
+[david-dm-image]: https://david-dm.org/tomchentw/gulp-livescript/dev-status.svg?theme=shields.io
+[david-dm-url]: https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies

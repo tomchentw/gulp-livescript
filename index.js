@@ -1,32 +1,33 @@
-var through, LiveScript, gutil;
-through = require('through2');
+var through2, LiveScript, gutil, PluginError;
+through2 = require('through2');
 LiveScript = require('LiveScript');
 gutil = require('gulp-util');
+PluginError = gutil.PluginError;
 module.exports = function(options){
   options || (options = {});
-  function modifyLS(file, enc, cb){
-    var ref$, e;
-    function fatalError(it){
-      cb(
-      new gutil.PluginError('gulp-livescript', it));
+  function modifyLS(file, enc, done){
+    var ref$, e, this$ = this;
+    function emitError(it){
+      this$.emit('error', new PluginError('gulp-livescript', it));
+      done();
     }
     if (file.isNull()) {
-      return cb();
+      return done();
     }
     if (file.isStream()) {
-      return fatalError('Streaming not supported');
+      return emitError('Streaming not supported');
     }
     try {
       file.contents = new Buffer(LiveScript.compile(file.contents.toString('utf8'), (ref$ = {}, import$(ref$, options), ref$.filename = file.path, ref$)));
       file.path = gutil.replaceExtension(file.path, '.js');
     } catch (e$) {
       e = e$;
-      return cb(new Error(e));
+      return emitError(e);
     }
     this.push(file);
-    cb();
+    done();
   }
-  return through.obj(modifyLS);
+  return through2.obj(modifyLS);
 };
 function import$(obj, src){
   var own = {}.hasOwnProperty;

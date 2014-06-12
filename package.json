@@ -29,15 +29,15 @@
   },
   "homepage": "https://github.com/tomchentw/gulp-livescript",
   "dependencies": {
-    "LiveScript": "^1.2.0",
     "gulp-util": "*",
-    "through2": "^0.4.2"
+    "LiveScript": "^1.2.0",
+    "through2": "^0.5.1"
   },
   "devDependencies": {
     "mocha": "^1.17.1",
-    "should": "^3.1.2",
+    "should": "^4.0.4",
     "gulp": "^3.5.2",
-    "gulp-bump": "^0.1.4",
-    "gulp-conventional-changelog": "^0.1.1"
+    "gulp-bump": "^0.1.5",
+    "gulp-conventional-changelog": "^0.1.2"
   }
 }
