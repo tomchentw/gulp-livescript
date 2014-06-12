@@ -1,29 +1,37 @@
 require! {
+  fs
   gulp
   'gulp-livescript': './src'
   'gulp-bump'
-  'gulp-conventional-changelog'
+  'conventional-changelog'
 }
 /*
  *
  * Define public interfaces for Makefile
  *
  */
-gulp.task 'release' <[ build bump ]> ->
-  return gulp.src <[ package.json CHANGELOG.md ]>
-  .pipe gulp-conventional-changelog!
-  .pipe gulp.dest '.'
+gulp.task 'release' <[ build bump ]> !(done) ->
+  !function changeParsed (err, log)
+    return done err if err
+    fs.writeFile 'CHANGELOG.md', log, done
+
+  (err, data) <-! fs.readFile './package.json', 'utf8'
+  const {repository, version} = JSON.parse data
+  conventional-changelog {
+    repository: repository.url
+    version: version
+  }, changeParsed
 /*
  *
  * Private support tasks, don't directly run them through cli
  *
  */
 gulp.task 'build' ->
-  return gulp.src 'src/index.ls'
+  gulp.src 'src/index.ls'
   .pipe gulp-livescript bare: true
   .pipe gulp.dest '.'
 
 gulp.task 'bump' ->
-  return gulp.src 'package.json'
+  gulp.src 'package.json'
   .pipe gulp-bump type: process.env.TYPE || 'patch'
   .pipe gulp.dest '.'
