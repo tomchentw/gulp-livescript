@@ -31,7 +31,7 @@
   "dependencies": {
     "gulp-util": "*",
     "LiveScript": "^1.2.0",
-    "through2": "^0.5.1"
+    "through2": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "^1.17.1",
