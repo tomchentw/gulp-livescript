@@ -1,3 +1,11 @@
+### 1.0.1 (2014-06-13)
+
+
+#### Features
+
+* **package.json:** update dependencies ([b29ff385](https://github.com/tomchentw/gulp-livescript/commit/b29ff385b704fd7841cfd10e07bc2a3de2308292))
+
+
 ## 1.0.0 (2014-06-13)
 
 
