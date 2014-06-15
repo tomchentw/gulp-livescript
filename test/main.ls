@@ -5,7 +5,7 @@ require! {
   mocha
 }
 
-const gulp-livescript = require if process.env.TRAVIS then '../lib' else '../src'
+const gulp-livescript = require if process.env.TRAVIS then '../' else '../src'
 
 (...) <-! describe 'gulp-livescript'
 
