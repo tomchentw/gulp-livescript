@@ -1,3 +1,11 @@
+### 1.0.2 (2014-06-15)
+
+
+#### Bug Fixes
+
+* **package.json:** downgrade through2 to 0.5.1 ([537e8863](https://github.com/tomchentw/gulp-livescript/commit/537e88631c938226fe3256769fb83bb850f13518))
+
+
 ### 1.0.1 (2014-06-13)
 
 
