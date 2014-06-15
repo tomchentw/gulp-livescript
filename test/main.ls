@@ -1,10 +1,11 @@
 require! {
   fs
   gutil: 'gulp-util'
-  'gulp-livescript': '../src'
   should
   mocha
 }
+
+const gulp-livescript = require if process.env.TRAVIS then '../lib' else '../src'
 
 (...) <-! describe 'gulp-livescript'
 

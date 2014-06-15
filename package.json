@@ -4,7 +4,8 @@
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers ls:LiveScript"
+    "test": "mocha -R spec --compilers ls:LiveScript",
+    "coveralls": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -34,8 +35,11 @@
     "through2": "^0.5.1"
   },
   "devDependencies": {
-    "mocha": "^1.17.1",
     "should": "^4.0.4",
+    "mocha": "^1.17.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "istanbul": "^0.2.11",
+    "coveralls": "^2.10.0",
     "gulp": "^3.5.2",
     "gulp-bump": "^0.1.5",
     "conventional-changelog": "0.0.11"

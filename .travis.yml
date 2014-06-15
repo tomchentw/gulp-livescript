@@ -2,3 +2,8 @@ language: node_js
 node_js:
 - '0.10'
 - '0.11'
+after_script:
+- npm run coveralls
+env:
+  global:
+    secure: aKoctLql0Yrz3meCJFOmtlbgBpSDOwfAZXnn4jB6xP9xoAWPP2lb/AROKEV1pC8kisUg6+afwg7gKBKtRf0WYyew9Ye1AtEHrGM/opN5arRg3TjZATL8udh7ClC8YV7qzZQhOH8VGoDsPfoyrbNchERW9Mc9HSbq+ESP78nbl/s=
