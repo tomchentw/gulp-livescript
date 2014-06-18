@@ -58,3 +58,19 @@ it 'should emit error when livescript compilation fails' !(done) ->
     done!
 
   ls.write fakeFile
+
+it 'should emit error with streaming files' !(done) ->
+  const ls = gulp-livescript bare: true
+  const fakeFile = new gutil.File do
+      base: 'test/fixtures'
+      cwd: 'test/fixtures'
+      path: 'test/fixtures/illegal.ls'
+      contents: fs.createReadStream 'test/fixtures/file.ls'
+
+  ls.once 'error' !(error) ->
+    should.exist error
+    should.exist error.message
+    error.message.should.equal "Streaming not supported"
+    done!
+
+  ls.write fakeFile

@@ -4,25 +4,20 @@ require! {
   gutil: 'gulp-util'
 }
 
-const {PluginError} = gutil
-
 module.exports = (options || {}) ->
   !function modifyLS (file, enc, done)
+    return done null, file if file.isNull!
 
-    !~function emitError
-      @emit 'error' new PluginError 'gulp-livescript', it
-      done!
+    if file.isStream!
+      error = 'Streaming not supported'
+    else
+      try
+        file.contents = file.contents.toString 'utf8' |>
+          LiveScript.compile _, {...options, filename: file.path} |> new Buffer _
+        file.path = gutil.replaceExtension file.path, '.js'
+      catch error
 
-    return done! if file.isNull!
-    return emitError 'Streaming not supported' if file.isStream!
-
-    try
-      file.contents = file.contents.toString 'utf8' |>
-        LiveScript.compile _, {...options, filename: file.path} |> new Buffer _
-      file.path = gutil.replaceExtension file.path, '.js'
-    catch e
-      return emitError e
-    @push file
-    done!
+    error = new gutil.PluginError 'gulp-livescript', error if error
+    done error, file
 
   through2.obj modifyLS
