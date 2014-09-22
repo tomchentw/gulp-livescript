@@ -20,9 +20,6 @@ module.exports = function(options){
           options: options
         };
         json = options.json;
-        if (json) {
-          console.log("output json!");
-        }
         t.tokens = LiveScript.tokens(t.input, {
           raw: options.lex
         });

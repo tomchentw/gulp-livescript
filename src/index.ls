@@ -15,7 +15,6 @@ module.exports = (options || {}) ->
         input = file.contents.toString 'utf8'
         t = {input, options}
         json = options.json
-        console.log "output json!" if json
         t.tokens = LiveScript.tokens t.input, raw: options.lex
         t.ast = LiveScript.ast t.tokens
         options.bare ||= json
