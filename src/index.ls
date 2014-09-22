@@ -12,8 +12,18 @@ module.exports = (options || {}) ->
       error = 'Streaming not supported'
     else
       try
-        file.contents = file.contents.toString 'utf8' |>
-          LiveScript.compile _, {...options, filename: file.path} |> new Buffer _
+        input = file.contents.toString 'utf8'
+        t = {input, options}
+        json = options.json
+        t.tokens = LiveScript.tokens t.input, raw: options.lex
+        t.ast = LiveScript.ast t.tokens
+        options.bare ||= json
+        t.ast.make-return! if json
+        t.output = t.ast.compile-root options
+        if json =>
+          t.result = LiveScript.run t.output, options, true
+          t.output = JSON.stringify(t.result, null, 2) + '\n'
+        file.contents = new Buffer t.output
         file.path = gutil.replaceExtension file.path, '.js'
       catch error
 
