@@ -43,6 +43,23 @@ it 'should compile livescript with bare option to javascript' !(done) ->
 
   ls.write fakeFile
 
+it 'should compile livescript json files' !(done) ->
+  const ls = gulp-livescript {+json}
+  const fakeFile = new gutil.File do
+      base: 'test/fixtures'
+      cwd: 'test/fixtures'
+      path: 'test/fixtures/file.ls'
+      contents: fs.readFileSync 'test/fixtures/package.ls'
+
+  ls.once 'data' !(expectedFile) ->
+    should.exist expectedFile
+    should.exist expectedFile.path
+    should.exist expectedFile.contents 
+    String expectedFile.contents .should.equal fs.readFileSync('test/fixtures/json-expected.json', 'utf8')
+    done!
+
+  ls.write fakeFile
+
 it 'should emit error when livescript compilation fails' !(done) ->
   const ls = gulp-livescript bare: true
   const fakeFile = new gutil.File do
