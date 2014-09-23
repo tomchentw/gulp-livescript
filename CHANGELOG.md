@@ -1,3 +1,11 @@
+## 1.1.0 (2014-09-23)
+
+
+#### Features
+
+* **index:** add support for outputing json ([306da937](https://github.com/tomchentw/gulp-livescript/commit/306da9373568cf52fe48ca1c2777f03caa573417))
+
+
 ### 1.0.3 (2014-06-18)
 
 
