@@ -38,8 +38,6 @@
   "devDependencies": {
     "conventional-changelog": "0.0.11",
     "coveralls": "^2.10.0",
-    "gulp": "^3.5.2",
-    "gulp-bump": "^0.1.5",
     "istanbul": "^0.2.11",
     "mocha": "^1.17.1",
     "mocha-lcov-reporter": "0.0.1",

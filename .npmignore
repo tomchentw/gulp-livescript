@@ -19,5 +19,3 @@ src
 test
 
 .travis.yml
-gulpfile.ls
-Makefile
