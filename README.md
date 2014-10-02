@@ -82,18 +82,18 @@ The options object supports the same options as the standard LiveScript compiler
 * [`gulp-coffee` by @wearefractal](https://github.com/wearefractal/gulp-coffee)
 
 
-[npm-image]: https://img.shields.io/npm/v/gulp-livescript.svg
+[npm-image]: https://img.shields.io/npm/v/gulp-livescript.svg?style=flat-square
 [npm-url]: https://www.npmjs.org/package/gulp-livescript
 
-[travis-image]: https://travis-ci.org/tomchentw/gulp-livescript.svg?branch=master
+[travis-image]: https://img.shields.io/travis/tomchentw/gulp-livescript.svg?style=flat-square
 [travis-url]: https://travis-ci.org/tomchentw/gulp-livescript
-[codeclimate-image]: https://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg
+[codeclimate-image]: https://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/tomchentw/gulp-livescript
-[coveralls-image]: https://img.shields.io/coveralls/tomchentw/gulp-livescript.svg
+[coveralls-image]: https://img.shields.io/coveralls/tomchentw/gulp-livescript.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/tomchentw/gulp-livescript
-[gemnasium-image]: https://gemnasium.com/tomchentw/gulp-livescript.svg
+[gemnasium-image]: https://img.shields.io/gemnasium/tomchentw/gulp-livescript.svg?style=flat-square
 [gemnasium-url]: https://gemnasium.com/tomchentw/gulp-livescript
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/tomchentw/gulp-livescript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-[david-dm-image]: https://david-dm.org/tomchentw/gulp-livescript/dev-status.svg?theme=shields.io
+[david-dm-image]: https://img.shields.io/david/dev/tomchentw/gulp-livescript.svg?style=flat-square
 [david-dm-url]: https://david-dm.org/tomchentw/gulp-livescript#info=devDependencies
