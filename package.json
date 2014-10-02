@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec --compilers ls:LiveScript",
-    "coveralls": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "coveralls": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "build": "lsc -b -c -o ./ ./src/*"
   },
   "repository": {
     "type": "git",
@@ -35,13 +36,14 @@
     "through2": "^0.5.1"
   },
   "devDependencies": {
-    "should": "^4.0.4",
-    "mocha": "^1.17.1",
-    "mocha-lcov-reporter": "0.0.1",
-    "istanbul": "^0.2.11",
+    "conventional-changelog": "0.0.11",
     "coveralls": "^2.10.0",
     "gulp": "^3.5.2",
     "gulp-bump": "^0.1.5",
-    "conventional-changelog": "0.0.11"
+    "istanbul": "^0.2.11",
+    "mocha": "^1.17.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "should": "^4.0.4",
+    "tomchentw-npm-dev": "0.0.13"
   }
 }
