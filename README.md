@@ -1,4 +1,5 @@
 # gulp-livescript [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][coveralls-image]][coveralls-url] [![Dependencies][gemnasium-image]][gemnasium-url]
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/tomchentw/gulp-livescript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 > Compile LiveScript to JavaScript for Gulp
 
 [![Version][npm-image]][npm-url]
