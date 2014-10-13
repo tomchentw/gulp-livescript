@@ -1,4 +1,4 @@
-# gulp-livescript [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][coveralls-image]][coveralls-url] [![Dependencies][gemnasium-image]][gemnasium-url] [![Gitter][gitter-image]][gitter-url]
+# gulp-livescript [![Travis CI][travis-image]][travis-url] [![Quality][codeclimate-image]][codeclimate-url] [![Coverage][codeclimate-coverage-image]][codeclimate-coverage-url] [![Dependencies][gemnasium-image]][gemnasium-url] [![Gitter][gitter-image]][gitter-url]
 > Compile LiveScript to JavaScript for Gulp
 
 [![Version][npm-image]][npm-url]
@@ -89,8 +89,8 @@ The options object supports the same options as the standard LiveScript compiler
 [travis-url]: https://travis-ci.org/tomchentw/gulp-livescript
 [codeclimate-image]: https://img.shields.io/codeclimate/github/tomchentw/gulp-livescript.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/tomchentw/gulp-livescript
-[coveralls-image]: https://img.shields.io/coveralls/tomchentw/gulp-livescript.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/tomchentw/gulp-livescript
+[codeclimate-coverage-image]: https://img.shields.io/codeclimate/coverage/github/tomchentw/gulp-livescript.svg?style=flat-square
+[codeclimate-coverage-url]: https://codeclimate.com/github/tomchentw/gulp-livescript
 [gemnasium-image]: https://img.shields.io/gemnasium/tomchentw/gulp-livescript.svg?style=flat-square
 [gemnasium-url]: https://gemnasium.com/tomchentw/gulp-livescript
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
