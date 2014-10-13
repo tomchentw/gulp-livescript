@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "lsc -b -c -o ./lib ./src/*",
-    "test": "mocha -R spec --compilers ls:LiveScript",
-    "test_travis": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript",
+    "test": "mocha -R spec --compilers ls:LiveScript --require should",
+    "test_travis": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript --require should",
     "coverage_travis": "codeclimate < coverage/lcov.info"
   },
   "repository": {
@@ -37,12 +37,10 @@
     "through2": "^0.5.1"
   },
   "devDependencies": {
-    "conventional-changelog": "0.0.11",
-    "coveralls": "^2.10.0",
-    "istanbul": "^0.2.11",
-    "mocha": "^1.17.1",
-    "mocha-lcov-reporter": "0.0.1",
+    "codeclimate-test-reporter": "0.0.4",
+    "istanbul": "^0.3.2",
+    "mocha": "^1.21.4",
     "should": "^4.0.4",
-    "tomchentw-npm-dev": "0.0.13"
+    "tomchentw-npm-dev": "^1.0.0"
   }
 }
