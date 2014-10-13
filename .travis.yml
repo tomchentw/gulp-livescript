@@ -2,8 +2,9 @@ language: node_js
 node_js:
 - '0.10'
 - '0.11'
+script: npm run test_travis
 after_script:
-- npm run coveralls
+- npm run coverage_travis
 env:
   global:
-    secure: aKoctLql0Yrz3meCJFOmtlbgBpSDOwfAZXnn4jB6xP9xoAWPP2lb/AROKEV1pC8kisUg6+afwg7gKBKtRf0WYyew9Ye1AtEHrGM/opN5arRg3TjZATL8udh7ClC8YV7qzZQhOH8VGoDsPfoyrbNchERW9Mc9HSbq+ESP78nbl/s=
+    secure: gxBR5W5v9QSKdFcdsyECY/Jd3qvnmA8Lp9yjbghbF9Bgrj3jLTbvHZgR6gZEmViWMa/vqLVHzp2vNn/CVX30SAcvUFsoQf95nlE1H/jdElPASgPIUs8mR8tQrxWGCdIysLHZ8hli+mhqDK4x2xEbQUJFhcjrvXX0qiascMEkPi4=

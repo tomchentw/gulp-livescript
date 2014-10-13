@@ -2,11 +2,12 @@
   "name": "gulp-livescript",
   "version": "1.1.1",
   "description": "Compile LiveScript to JavaScript for Gulp",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "lsc -b -c -o ./lib ./src/*",
     "test": "mocha -R spec --compilers ls:LiveScript",
-    "coveralls": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "build": "lsc -b -c -o ./ ./src/*"
+    "test_travis": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript",
+    "coverage_travis": "codeclimate < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
