@@ -12,6 +12,7 @@ module.exports = (options || {}) ->
       error = "Streaming not supported"
     else
       try
+        fileExtension = ".js"
         input = file.contents.toString "utf8"
         t = {input, options}
         json = options.json
@@ -23,8 +24,9 @@ module.exports = (options || {}) ->
         if json =>
           t.result = LiveScript.run t.output, options, true
           t.output = JSON.stringify(t.result, null, 2) + "\n"
+          fileExtension = ".json"
         file.contents = new Buffer t.output
-        file.path = gutil.replaceExtension file.path, ".js"
+        file.path = gutil.replaceExtension file.path, fileExtension
       catch error
 
     error = new gutil.PluginError "gulp-livescript", error if error
