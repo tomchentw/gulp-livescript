@@ -1,6 +1,6 @@
 {
   "name": "gulp-livescript",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "lib/index.js",
   "scripts": {
@@ -32,15 +32,15 @@
   },
   "homepage": "https://github.com/tomchentw/gulp-livescript",
   "dependencies": {
-    "gulp-util": "*",
-    "LiveScript": "^1.2.0",
-    "through2": "^0.5.1"
+    "gulp-util": "~3.0.1",
+    "LiveScript": "~1.2.0",
+    "through2": "~0.6.3"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "0.0.4",
-    "istanbul": "^0.3.2",
-    "mocha": "^1.21.4",
-    "should": "^4.0.4",
-    "tomchentw-npm-dev": "^1.0.0"
+    "codeclimate-test-reporter": "~0.0.4",
+    "istanbul": "~0.3.2",
+    "mocha": "~1.21.5",
+    "should": "~4.0.4",
+    "tomchentw-npm-dev": "~1.0.0"
   }
 }
