@@ -1,3 +1,13 @@
+## 2.0.0 (2014-10-17)
+
+
+#### Features
+
+* **package.json:**
+  * move LiveScript to peerDependencies ([8a7bd6fd](https://github.com/tomchentw/gulp-livescript/commit/8a7bd6fd64aa7817cbe49a5560ff67ec268b1d90))
+  * changed dependencies from ~ to ^ ([2fc18196](https://github.com/tomchentw/gulp-livescript/commit/2fc1819697740537a56bb05f2f5e6285668edeed))
+
+
 ## 1.3.0 (2014-10-17)
 
 
