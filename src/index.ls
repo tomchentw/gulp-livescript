@@ -1,7 +1,7 @@
 require! {
   through2
   LiveScript
-  "gulp-util": gutil
+  gutil: 'gulp-util'
 }
 
 module.exports = (options || {}) ->
