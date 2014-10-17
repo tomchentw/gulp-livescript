@@ -1,3 +1,16 @@
+## 1.3.0 (2014-10-17)
+
+
+#### Bug Fixes
+
+* **index.js:** require syntax for LiveScript 1.3.0 ([0dcbb6bf](https://github.com/tomchentw/gulp-livescript/commit/0dcbb6bfcc118d505d586a7474609efd1cb4f48e))
+
+
+#### Features
+
+* **package.json:** upgrade LiveScript to 1.3.0 ([3c2202d4](https://github.com/tomchentw/gulp-livescript/commit/3c2202d42b928dd79586debdc4f31340dd022266))
+
+
 ### 1.2.1 (2014-10-17)
 
 
