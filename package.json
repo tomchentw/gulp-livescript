@@ -4,7 +4,7 @@
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "lib/index.js",
   "scripts": {
-    "build": "lsc -b -c -o ./lib ./src/*",
+    "build": "lsc --no-header -b -c -o ./lib ./src/*",
     "test": "mocha -R spec --compilers ls:LiveScript --require should",
     "test_travis": "istanbul cover _mocha -- -R spec --compilers ls:LiveScript --require should",
     "coverage_travis": "codeclimate < coverage/lcov.info"
