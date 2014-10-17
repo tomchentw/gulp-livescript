@@ -1,6 +1,6 @@
 require! {
   fs
-  gutil: "gulp-util"
+  "gulp-util": gutil
 }
 const gulp-livescript = require if process.env.TRAVIS then "../" else "../src"
 
