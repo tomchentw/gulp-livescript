@@ -1,3 +1,13 @@
+### 2.1.1 (2014-11-07)
+
+
+#### Bug Fixes
+
+* **index:**
+  * build for #16 ([1ca99ce3](https://github.com/tomchentw/gulp-livescript/commit/1ca99ce3bb8296ae59ae63bc08da2690c8d6bf19))
+  * outputted extname should be .json ([cc795730](https://github.com/tomchentw/gulp-livescript/commit/cc795730d65f3a5ab8ed91d80140d892efcbcb62))
+
+
 ## 2.1.0 (2014-11-06)
 
 
