@@ -20,7 +20,7 @@ module.exports = (options || {}) ->
         if path.extname(filename) == '.json' || options.json
           file.path = path.join do
              dirname,
-             path.basename(file.path, '.json') + '.json'
+             path.basename(filename, '.json') + '.json'
           json = true
         else
           file.path = path.join(dirname, filename + '.js')
