@@ -1,3 +1,11 @@
+## 2.1.0 (2014-11-06)
+
+
+#### Features
+
+* **index.js:** add support for .json.ls extension ([043d92da](https://github.com/tomchentw/gulp-livescript/commit/043d92da728fa90adb29909557db3c4cd69802a8))
+
+
 ## 2.0.0 (2014-10-17)
 
 
