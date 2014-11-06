@@ -57,6 +57,23 @@ it "should compile livescript json files" !(done) ->
 
   ls.write fakeFile
 
+it "should compile livescript json files when extname is .json.ls" !(done) ->
+  const ls = gulp-livescript!
+  const fakeFile = new gutil.File do
+      base: "test/fixtures"
+      cwd: "test/fixtures"
+      path: "test/fixtures/file.json.ls"
+      contents: fs.readFileSync "test/fixtures/package.ls"
+
+  ls.once "data" !(expectedFile) ->
+    expectedFile.should.exist
+    expectedFile.path.should.exist
+    expectedFile.contents.should.exist
+    String expectedFile.contents .should.equal fs.readFileSync("test/fixtures/json-expected.json", "utf8")
+    done!
+
+  ls.write fakeFile
+
 it "should emit error when livescript compilation fails" !(done) ->
   const ls = gulp-livescript bare: true
   const fakeFile = new gutil.File do
