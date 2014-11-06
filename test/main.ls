@@ -67,7 +67,7 @@ it "should compile livescript json files when extname is .json.ls" !(done) ->
 
   ls.once "data" !(expectedFile) ->
     expectedFile.should.exist
-    expectedFile.path.should.exist
+    expectedFile.path.should.equal "test/fixtures/file.json"
     expectedFile.contents.should.exist
     String expectedFile.contents .should.equal fs.readFileSync("test/fixtures/json-expected.json", "utf8")
     done!
