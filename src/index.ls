@@ -1,3 +1,4 @@
+"use strict";
 require! {
   through2
   LiveScript
@@ -5,6 +6,7 @@ require! {
   "gulp-util": gutil
 }
 
+/* jshint -W030 */
 module.exports = (options || {}) ->
   !function modifyLS (file, enc, done)
     return done null, file if file.isNull!
@@ -17,7 +19,7 @@ module.exports = (options || {}) ->
         
         dirname = path.dirname(file.path)
         filename = path.basename(file.path, '.ls')
-        if path.extname(filename) == '.json' || options.json
+        if options.json or '.json' is path.extname(filename)
           file.path = path.join do
              dirname,
              path.basename(filename, '.json') + '.json'
