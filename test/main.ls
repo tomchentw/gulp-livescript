@@ -1,3 +1,7 @@
+"use strict";
+/**
+ * __template__gist__: https://gist.github.com/tomchentw/0dc24c30955c1a6c94d4#file-test__index-js
+ */
 require! {
   fs
   "gulp-util": gutil
@@ -5,6 +9,8 @@ require! {
 const gulp-livescript = require if process.env.TRAVIS then "../" else "../src"
 
 (...) <-! describe "gulp-livescript"
+require("mocha-jshint")(["./lib/"])
+require("mocha-jscs")(["./lib/"])
 
 it "should compile livescript file to javascript" !(done) ->
   const ls = gulp-livescript!
