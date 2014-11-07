@@ -1,0 +1,49 @@
+/**
+ * __template__gist__: https://gist.github.com/tomchentw/0dc24c30955c1a6c94d4#file-jscsrc
+ */
+{
+  "disallowEmptyBlocks": true,
+  "disallowSpacesInsideArrayBrackets": true,
+  "disallowSpacesInsideParentheses": true,
+  "disallowQuotedKeysInObjects": "allButReserved",
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceAfterPrefixUnaryOperators": true,
+  "disallowSpaceBeforePostfixUnaryOperators": true,
+  "disallowSpaceBeforeBinaryOperators": [
+    ","
+  ],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowTrailingWhitespace": true,
+  "disallowTrailingComma": true,
+  "disallowKeywords": [ "with" ],
+  "disallowMultipleLineBreaks": true,
+  "requireYodaConditions": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireSpacesInConditionalExpression": true,
+  "requireMultipleVarDecl": "onevar",
+  "requireBlocksOnNewline": 1,
+  "requireCommaBeforeLineBreak": true,
+  "requireSpaceBeforeBinaryOperators": true,
+  "requireSpaceAfterBinaryOperators": true,
+  "requireCapitalizedConstructors": true,
+  "requireDotNotation": true,
+  "requireCurlyBraces": [
+    "do"
+  ],
+  "requireSpaceAfterKeywords": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "return",
+    "try",
+    "catch",
+    "typeof"
+  ],
+  "safeContextKeyword": "target",
+  "validateLineBreaks": "LF",
+  "validateIndentation": 2
+}
