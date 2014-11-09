@@ -1,7 +1,7 @@
 {
   "__template__gist__": "https://gist.github.com/tomchentw/0dc24c30955c1a6c94d4#file-package-json",
   "name": "gulp-livescript",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "lib/index.js",
   "scripts": {

@@ -1,3 +1,12 @@
+## 2.2.0 (2014-11-09)
+
+
+#### Features
+
+* **index.ls:** rewrite module in object-oriented way ([60944855](https://github.com/tomchentw/gulp-livescript/commit/60944855a2eff3548577178beec057011de0dd9e))
+* **lib:** compile LS to JS ([c1e77427](https://github.com/tomchentw/gulp-livescript/commit/c1e77427ffcc376f7b80859ee0e3b05b869b93cb))
+
+
 ### 2.1.1 (2014-11-07)
 
 
