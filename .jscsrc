@@ -20,7 +20,6 @@
   "requireYodaConditions": true,
   "requireParenthesesAroundIIFE": true,
   "requireSpacesInConditionalExpression": true,
-  "requireMultipleVarDecl": "onevar",
   "requireBlocksOnNewline": 1,
   "requireCommaBeforeLineBreak": true,
   "requireSpaceBeforeBinaryOperators": true,
