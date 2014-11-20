@@ -5,10 +5,10 @@
   "description": "Compile LiveScript to JavaScript for Gulp",
   "main": "lib/index.js",
   "scripts": {
-    "postinstall": "npm dedupe",
     "build": "lsc --no-header -b -c -o ./lib ./src/*",
     "test": "mocha test/main.ls --require should --compilers ls:LiveScript",
     "dev": "mocha test/main.ls --require should --watch --compilers ls:LiveScript",
+    "dev_install": "npm install && npm dedupe",
     "test_travis": "istanbul cover _mocha -- test/main.ls --require should --compilers ls:LiveScript",
     "coverage_travis": "codeclimate < coverage/lcov.info"
   },
