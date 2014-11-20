@@ -91,7 +91,7 @@ it "should emit error when livescript compilation fails" !(done) ->
   ls.once "error" !(error) ->
     error.should.exist
     error.message.should.exist
-    error.message.should.equal "Parse error on line 1: Unexpected 'ID'"
+    error.message.should.equal "Parse error on line 1: Unexpected 'ID'\nat test/fixtures/illegal.js"
     done!
 
   ls.write fakeFile
