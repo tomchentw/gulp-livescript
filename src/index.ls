@@ -51,6 +51,7 @@ class VinylLSConverter
 
       clonedFile.contents = new Buffer(output)
     catch error
+      error.message += "\nat " + clonedFile.path
       clonedFile = null
     [error, clonedFile]
 
