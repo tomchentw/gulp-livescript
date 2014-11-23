@@ -1,3 +1,11 @@
+## 2.3.0 (2014-11-23)
+
+
+#### Features
+
+* shows filename on compilation error ([919c401a](https://github.com/tomchentw/gulp-livescript/commit/919c401ae3525a4fe26be71b10304a949530558f))
+
+
 ### 2.2.1 (2014-11-20)
 
 
