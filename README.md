@@ -27,7 +27,9 @@
 
 ## Example
 
-### See how we compile [`src/index.ls`](https://github.com/tomchentw/gulp-livescript/blob/master/src/index.ls) to [`index.js`](https://github.com/tomchentw/gulp-livescript/blob/master/index.js) in [this project](https://github.com/tomchentw/gulp-livescript/blob/master/gulpfile.ls).
+### See how we compile [`src/index.ls`](https://github.com/tomchentw/gulp-livescript/blob/master/src/index.ls) to [`lib/index.js`](https://github.com/tomchentw/gulp-livescript/blob/master/lib/index.js) in [this project](https://github.com/tomchentw/gulp-livescript/blob/631b6f34e74133a595609732d724e98649ab48a6/gulpfile.ls).
+
+*Notice:* I used gulpfile to compile src to lib in the old days, now I use `lsc` compiler directly.
 
 ![`gulpfile.ls`](https://f.cloud.github.com/assets/922234/2353915/093164d2-a5ae-11e3-8016-d1191004acb2.png)
 
