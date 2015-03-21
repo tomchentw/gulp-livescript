@@ -4,6 +4,7 @@ require! {
   LiveScript
   path: Path
   "gulp-util": gutil
+  "vinyl-sourcemaps-apply": applySourceMap
 }
 
 module.exports = (options) ->
@@ -43,13 +44,22 @@ class VinylLSConverter
       tokens = LiveScript.tokens(input, raw: options.lex)
       ast = LiveScript.ast(tokens)
       ast.make-return! if json
-      output = ast.compile-root(options)
+      clonedFilename = Path.basename(clonedFile.path)
+      filename = clonedFilename.replace /js$/, 'ls'
+      output = ast.compile-root options
 
       if json
-        result = LiveScript.run(output, options, true)
+        result = LiveScript.run(output.toString!, options, true)
         output = JSON.stringify(result, null, 2) + "\n"
+        clonedFile.contents = new Buffer output.toString!
+      else
+        output.setFile filename
+        output = output.toStringWithSourceMap!
+        if clonedFile.source-map
+          output.map._file = clonedFilename
+          applySourceMap clonedFile, output.map.toString!
+        clonedFile.contents = new Buffer output.code
 
-      clonedFile.contents = new Buffer(output)
     catch error
       error.message += "\nat " + clonedFile.path
       clonedFile = null
