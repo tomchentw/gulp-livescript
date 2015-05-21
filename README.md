@@ -4,6 +4,13 @@
 [![Version][npm-image]][npm-url]
 
 
+## Installation
+
+```sh
+npm i --save gulp-livescript
+```
+
+
 ## Information
 
 <table>
