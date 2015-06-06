@@ -1,7 +1,7 @@
 "use strict";
 require! {
   through2
-  LiveScript
+  livescript
   path: Path
   "gulp-util": gutil
   "vinyl-sourcemaps-apply": applySourceMap
@@ -41,15 +41,15 @@ class VinylLSConverter
       options = {} <<< @options
       options.bare ||= json
 
-      tokens = LiveScript.tokens(input, raw: options.lex)
-      ast = LiveScript.ast(tokens)
+      tokens = livescript.tokens(input, raw: options.lex)
+      ast = livescript.ast(tokens)
       ast.make-return! if json
       clonedFilename = Path.basename(clonedFile.path)
       filename = clonedFilename.replace /js$/, 'ls'
       output = ast.compile-root options
 
       if json
-        result = LiveScript.run(output.toString!, options, true)
+        result = livescript.run(output.toString!, options, true)
         output = JSON.stringify(result, null, 2) + "\n"
         clonedFile.contents = new Buffer output.toString!
       else
