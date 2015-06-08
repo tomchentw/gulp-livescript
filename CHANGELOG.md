@@ -1,3 +1,11 @@
+## 2.4.0 (2015-06-08)
+
+
+#### Features
+
+* **index.ls:** support sourcemap ([544eb886](https://github.com/tomchentw/gulp-livescript/commit/544eb886c62c15663bb13033a825b1f4859d9f3c))
+
+
 ### 2.3.1 (2015-05-21)
 
 
