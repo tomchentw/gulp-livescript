@@ -5,6 +5,7 @@
 require! {
   fs
   "gulp-util": gutil
+  "gulp-sourcemaps": sourcemaps
 }
 const gulp-livescript = require if process.env.TRAVIS then "../" else "../src"
 
@@ -111,3 +112,23 @@ it "should emit error with streaming files" !(done) ->
     done!
 
   ls.write fakeFile
+
+it "should compile livescript file with source map" !(done) ->
+  const ls = gulp-livescript!
+  const fakeFile = new gutil.File do
+      base: "test/fixtures"
+      cwd: "test/fixtures"
+      path: "test/fixtures/file.ls"
+      contents: fs.readFileSync "test/fixtures/file.ls"
+
+  stream = sourcemaps.init!
+  stream.write fakeFile
+  stream.pipe ls
+    .once 'data' !(expectedFile) ->
+      mappings = JSON.parse fs.readFileSync("test/fixtures/expected.js.map", "utf8") .mappings
+      expectedFile.should.exist
+      expectedFile.path.should.exist
+      expectedFile.contents.should.exist
+      expectedFile.sourceMap.mappings.should.equal mappings
+      done!
+

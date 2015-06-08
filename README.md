@@ -14,7 +14,7 @@ npm i --save gulp-livescript
 ## Information
 
 <table>
-<tr> 
+<tr>
 <td>Package</td><td>gulp-livescript</td>
 </tr>
 <tr>
@@ -74,6 +74,35 @@ gulp.task 'build' ->
 
 The options object supports the same options as the standard LiveScript compiler.
 
+## Source maps
+
+gulp-livescript can be used in tandem with [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) to generate source maps for the livescript to javascript transition. You will need to initialize [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) prior to running the gulp-livescript compiler and write the source maps after.
+
+```javascript
+var sourcemaps = require('gulp-sourcemaps');
+
+gulp.src('./src/*.ls')
+  .pipe(sourcemaps.init())
+  .pipe(livescript())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./dest/js'));
+
+// will write the source maps inline in the compiled javascript files
+```
+
+By default, [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) writes the source maps inline in the compiled javascript files. To write them to a separate file, specify a relative file path in the `sourcemaps.write()` function.
+
+```javascript
+var sourcemaps = require('gulp-sourcemaps');
+
+gulp.src('./src/*.ls')
+  .pipe(sourcemaps.init())
+  .pipe(livescript({ bare: true })).on('error', gutil.log)
+  .pipe(sourcemaps.write('./maps'))
+  .pipe(gulp.dest('./dest/js'));
+
+// will write the source maps to ./dest/js/maps
+```
 
 ## Contributing
 
