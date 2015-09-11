@@ -30,6 +30,22 @@ it "should compile livescript file to javascript" !(done) ->
 
   ls.write fakeFile
 
+it "should ignore null files" !(done) ->
+  const ls = gulp-livescript!
+  const fakeFile = new gutil.File do
+      base: "test/fixtures"
+      cwd: "test/fixtures"
+      path: "test/fixtures/file.ls"
+      contents: null
+
+  ls.once "data" !(expectedFile) ->
+    expectedFile.should.exist
+    expectedFile.path.should.exist
+    String expectedFile.contents .should.equal JSON.stringify(null)
+    done!
+
+  ls.write fakeFile
+
 it "should compile livescript with bare option to javascript" !(done) ->
   const ls = gulp-livescript bare: true
   const fakeFile = new gutil.File do
