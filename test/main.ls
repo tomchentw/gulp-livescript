@@ -148,3 +148,23 @@ it "should compile livescript file with source map" !(done) ->
       expectedFile.sourceMap.mappings.should.equal mappings
       done!
 
+it "should compile livescript structured files with source map" !(done) ->
+  const ls = gulp-livescript!
+  const fakeFile = new gutil.File do
+      base: "test/fixtures"
+      cwd: "test/fixtures"
+      path: "test/fixtures/level2_dir/file.ls"
+      contents: fs.readFileSync "test/fixtures/file.ls"
+
+  stream = sourcemaps.init!
+  stream.write fakeFile
+  stream.pipe ls
+    .once 'data' !(expectedFile) ->
+      map = JSON.parse fs.readFileSync("test/fixtures/expected2.js.map", "utf8")
+      mappings = map.mappings
+      expectedFile.should.exist
+      expectedFile.path.should.exist
+      expectedFile.contents.should.exist
+      expectedFile.sourceMap.sources.should.eql map.sources
+      expectedFile.sourceMap.mappings.should.equal mappings
+      done!
