@@ -1,3 +1,13 @@
+<a name="2.4.1"></a>
+## [2.4.1](https://github.com/tomchentw/gulp-livescript/compare/v2.4.0...v2.4.1) (2015-12-07)
+
+
+### Bug Fixes
+
+* **index.ls:** use relative path in sourceMap.sources ([785374e](https://github.com/tomchentw/gulp-livescript/commit/785374e)), closes [#25](https://github.com/tomchentw/gulp-livescript/issues/25)
+
+
+
 ## 2.4.0 (2015-06-08)
 
 
