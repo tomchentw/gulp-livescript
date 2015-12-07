@@ -154,7 +154,7 @@ it "should compile livescript structured files with source map" !(done) ->
       base: "test/fixtures"
       cwd: "test/fixtures"
       path: "test/fixtures/level2_dir/file.ls"
-      contents: fs.readFileSync "test/fixtures/level2_dir/file.ls"
+      contents: fs.readFileSync "test/fixtures/file.ls"
 
   stream = sourcemaps.init!
   stream.write fakeFile
