@@ -1,3 +1,13 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/tomchentw/gulp-livescript/compare/v2.4.1...v3.0.0) (2015-12-07)
+
+
+### Features
+
+* **package.json:** upgrade dependencies ([7af8d07](https://github.com/tomchentw/gulp-livescript/commit/7af8d07))
+
+
+
 <a name="2.4.1"></a>
 ## [2.4.1](https://github.com/tomchentw/gulp-livescript/compare/v2.4.0...v2.4.1) (2015-12-07)
 
