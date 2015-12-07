@@ -1,5 +1,4 @@
 {
-  "__template__gist__": "https://gist.github.com/tomchentw/0dc24c30955c1a6c94d4#file-package-json",
   "name": "gulp-livescript",
   "version": "2.4.1",
   "description": "Compile livescript to JavaScript for Gulp",
@@ -33,21 +32,21 @@
   "homepage": "https://github.com/tomchentw/gulp-livescript",
   "dependencies": {
     "gulp-util": "^3.0.1",
-    "through2": "^0.6.3",
-    "vinyl-sourcemaps-apply": "^0.1.4"
+    "through2": "^2.0.0",
+    "vinyl-sourcemaps-apply": "^0.2.0"
   },
   "peerDependencies": {
     "livescript": "^1.4.0"
   },
   "devDependencies": {
     "livescript": "^1.4.0",
-    "codeclimate-test-reporter": "0.0.4",
+    "codeclimate-test-reporter": "0.1.1",
     "gulp-sourcemaps": "^1.5.1",
-    "istanbul": "^0.3.2",
+    "istanbul": "^0.4.1",
     "mocha": "^2.0.1",
-    "mocha-jscs": "^1.0.0",
-    "mocha-jshint": "0.0.9",
-    "should": "^4.0.4",
-    "tomchentw-npm-dev": "^1.1.0"
+    "mocha-jscs": "^4.0.0",
+    "mocha-jshint": "^2.2.5",
+    "should": "^7.1.1",
+    "tomchentw-npm-dev": "^3.2.0"
   }
 }

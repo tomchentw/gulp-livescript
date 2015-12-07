@@ -10,7 +10,7 @@ require! {
 const gulp-livescript = require if process.env.TRAVIS then "../" else "../src"
 
 (...) <-! describe "gulp-livescript"
-require("mocha-jshint")(["./lib/"])
+require("mocha-jshint")(paths: ["./lib/"])
 require("mocha-jscs")(["./lib/"])
 
 it "should compile livescript file to javascript" !(done) ->
