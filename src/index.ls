@@ -44,7 +44,7 @@ class VinylLSConverter
       tokens = livescript.tokens(input, raw: options.lex)
       ast = livescript.ast(tokens)
       ast.make-return! if json
-      clonedFilename = Path.basename(clonedFile.path)
+      clonedFilename = clonedFile.relative
       filename = clonedFilename.replace /js$/, 'ls'
       output = ast.compile-root options
 
