@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-- '0.10'
-- '0.11'
+- "4"
 script: npm run test_travis
 after_script:
 - npm run coverage_travis
