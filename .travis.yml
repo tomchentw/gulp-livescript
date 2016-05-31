@@ -1,9 +1,15 @@
+sudo: false
 language: node_js
 node_js:
-- "4"
-script: npm run test_travis
+- '5'
+- '4'
+before_install:
+- npm install -g npm
+script:
+- npm run test:cov
 after_script:
-- npm run coverage_travis
+- if [[ `node --version` == *v4* ]]; then cat ./coverage/lcov.info | ./node_modules/.bin/codeclimate-test-reporter;
+  fi
 env:
   global:
     secure: gxBR5W5v9QSKdFcdsyECY/Jd3qvnmA8Lp9yjbghbF9Bgrj3jLTbvHZgR6gZEmViWMa/vqLVHzp2vNn/CVX30SAcvUFsoQf95nlE1H/jdElPASgPIUs8mR8tQrxWGCdIysLHZ8hli+mhqDK4x2xEbQUJFhcjrvXX0qiascMEkPi4=
