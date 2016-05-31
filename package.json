@@ -9,7 +9,9 @@
     "dev": "mocha test/main.ls --require should --watch --compilers ls:livescript",
     "dev_install": "npm install && npm dedupe",
     "test_travis": "istanbul cover _mocha -- test/main.ls --require should --compilers ls:livescript",
-    "coverage_travis": "codeclimate < coverage/lcov.info"
+    "coverage_travis": "codeclimate < coverage/lcov.info",
+    "prerelease": "npm run build && git add -A && git commit -m 'chore(lib): compile from src using lsc'",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
