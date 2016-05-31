@@ -1,8 +1,12 @@
 (function(){
-  var curriedAdd, add5, slice$ = [].slice;
+  var curriedAdd, add5;
   function namedFunction(){
-    var args, a, b, options;
-    args = slice$.call(arguments);
+    var args, res$, i$, to$, a, b, options;
+    res$ = [];
+    for (i$ = 0, to$ = arguments.length; i$ < to$; ++i$) {
+      res$.push(arguments[i$]);
+    }
+    args = res$;
     a = args.a, b = args.b, options = args.options;
     import$(options, a);
     return options.b = b, options;
