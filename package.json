@@ -5,13 +5,16 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "lsc --no-header -b -c -o ./lib ./src/*",
-    "test": "mocha test/main.ls --require should --compilers ls:livescript",
     "dev": "mocha test/main.ls --require should --watch --compilers ls:livescript",
     "dev_install": "npm install && npm dedupe",
-    "test_travis": "istanbul cover _mocha -- test/main.ls --require should --compilers ls:livescript",
-    "coverage_travis": "codeclimate < coverage/lcov.info",
+    "test:cov": "cross-env NODE_ENV=test istanbul cover _mocha --report lcov -- $npm_package_config_mocha",
+    "test:watch": "npm test -- --watch",
+    "test": "cross-env NODE_ENV=test mocha $npm_package_config_mocha",
     "prerelease": "npm run build && git add -A && git commit -m 'chore(lib): compile from src using lsc'",
     "release": "standard-version"
+  },
+  "config": {
+    "mocha": "--compilers ls:livescript test/main.ls --require should"
   },
   "repository": {
     "type": "git",
@@ -41,10 +44,11 @@
     "livescript": "^1.4.0"
   },
   "devDependencies": {
-    "livescript": "^1.4.0",
     "codeclimate-test-reporter": "^0.3.1",
+    "cross-env": "^1.0.8",
     "gulp-sourcemaps": "^1.5.1",
     "istanbul": "^0.4.1",
+    "livescript": "^1.4.0",
     "mocha": "^2.0.1",
     "mocha-jscs": "^5.0.1",
     "mocha-jshint": "^2.2.5",
