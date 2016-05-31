@@ -1,3 +1,12 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/tomchentw/gulp-livescript/compare/v3.0.0...v3.0.1) (2016-05-31)
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/tomchentw/gulp-livescript/compare/v2.4.1...v3.0.0) (2015-12-07)
 
@@ -256,5 +265,3 @@ Add `gulp-conventional-changelog` and `gulp-release` into `release` task.
 
 * **index:** add compile functionality and test ([969ec3d4aab91b2e821dbf82c4124805977c1ed8](https://github.com/tomchentw/gulp-livescript/commit/969ec3d4aab91b2e821dbf82c4124805977c1ed8))
 * **init:** scaffold glup plugin with LiveScript support ([dc917bfd74737a381bef64f8220e53f2eee46b41](https://github.com/tomchentw/gulp-livescript/commit/dc917bfd74737a381bef64f8220e53f2eee46b41))
-
-
