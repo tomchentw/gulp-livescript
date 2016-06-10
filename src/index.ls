@@ -31,6 +31,8 @@ class VinylLSConverter
       [null, file]
     else if file.isStream!
       ["Streaming not supported", null]
+    else if '.js' is Path.extname file.path
+      [null, file]
     else
       @_tryConvertToJS(file.clone!)
 
