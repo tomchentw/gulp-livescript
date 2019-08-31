@@ -3,7 +3,7 @@ require! {
   through2
   livescript
   path: Path
-  "gulp-util": gutil
+  "plugin-error": PluginError
   "vinyl-sourcemaps-apply": applySourceMap
 }
 
@@ -23,7 +23,7 @@ class VinylLSConverter
 
   transformFn: !(file, enc, done) ~>
     [error, clonedFile] = @_convert(file)
-    error = new gutil.PluginError "gulp-livescript", error if error
+    error = new PluginError "gulp-livescript", error if error
     done(error, clonedFile)
 
   _convert: (file) ->
