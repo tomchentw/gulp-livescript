@@ -45,11 +45,12 @@ npm i --save gulp-livescript
 
 ```javascript
 var gulpLiveScript = require('gulp-livescript');
+var log = require('fancy-log');
 
 gulp.task('ls', function() {
   return gulp.src('./src/*.ls')
     .pipe(gulpLiveScript({bare: true})
-    .on('error', gutil.log))
+    .on('error', log.error))
     .pipe(gulp.dest('./public/'));
 });
 ```
